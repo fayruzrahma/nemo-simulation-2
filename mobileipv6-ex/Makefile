@@ -2,7 +2,7 @@
 # OMNeT++/OMNEST Makefile for mobileipv6-ex
 #
 # This file was generated with the command:
-#  opp_makemake -f --deep -O out -L../inet/out/$$\(CONFIGNAME\)/src -linet -DINET_IMPORT -KINET_PROJ=../inet
+#  opp_makemake -f --deep -O out -L/home/d8/git/inet/out/$$\(CONFIGNAME\)/src -linet -DINET_IMPORT -KINET_PROJ=/home/d8/git/inet
 #
 
 # Name of target to be created (-o option)
@@ -20,8 +20,8 @@ INCLUDE_PATH = -I. -Iresults -Isrc
 EXTRA_OBJS =
 
 # Additional libraries (-L, -l options)
-LIBS = -L../inet/out/$(CONFIGNAME)/src  -linet
-LIBS += -Wl,-rpath,`abspath ../inet/out/$(CONFIGNAME)/src`
+LIBS = -L$(INET_PROJ)/out/$(CONFIGNAME)/src  -linet
+LIBS += -Wl,-rpath,`abspath $(INET_PROJ)/out/$(CONFIGNAME)/src`
 
 # Output directory
 PROJECT_OUTPUT_DIR = out
@@ -35,7 +35,7 @@ OBJS =
 MSGFILES =
 
 # Other makefile variables (-K)
-INET_PROJ=../inet
+INET_PROJ=/home/d8/git/inet
 
 #------------------------------------------------------------------------------
 

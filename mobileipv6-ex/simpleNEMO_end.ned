@@ -24,6 +24,8 @@ import inet.networklayer.common.InterfaceTable;
 import inet.nodes.ipv6.StandardHost6;
 import inet.nodes.wireless.AccessPoint;
 import inet.nodes.xmipv6.MobileRouter6;
+import inet.world.radio.ChannelControl;
+
 
 module SimpleNeMO6_end
 {
@@ -36,25 +38,24 @@ module SimpleNeMO6_end
         inout ethg[];
         input radioIn @directIn;
     submodules:
+        // if interface is used (ex: wlan card, interface table should be added
         interfaceTable: InterfaceTable {
-            @display("p=590,37");
+            @display("p=612,36");
         }
-                wlan: <default("Ieee80211Nic")> like IWirelessNic {
-                    parameters:
-                        @display("p=396,216;q=queue");
-                }
+        
+        wlan: <default("Ieee80211Nic")> like IWirelessNic {
+            parameters:
+                @display("p=396,216;q=queue");
+        }
         notificationBoard: NotificationBoard {
             parameters:
                 @display("p=497,37");
         }
-        
+
         R: MobileRouter6 {
             parameters:
                 @display("p=196,305");
-                numRadios = 1;
-        }
-        configurator: FlatNetworkConfigurator6 {
-            @display("p=407,37");
+//                numRadios = 1;
         }
         LFN6: StandardHost6 {
             @display("p=344,305");
@@ -63,10 +64,14 @@ module SimpleNeMO6_end
         mobility: <mobilityType> like IMobility {
             @display("p=336,45");
         }
+//        channelControl: ChannelControl {
+//            @display("p=249,36");
+//        }
+
     connections allowunconnected:
 //        radioIn --> R.radioIn++;
-                radioIn --> wlan.radioIn;
-                wlan.upperLayerOut --> ethernetline --> R.ethg$i++;
-                wlan.upperLayerIn <-- ethernetline <-- R.ethg$o++;
+        radioIn --> wlan.radioIn;
+        wlan.upperLayerOut --> ethernetline --> R.ethg$i++;
+        wlan.upperLayerIn <-- ethernetline <-- R.ethg$o++;
         R.ethg++ <--> ethernetline <--> LFN6.ethg++;
 }

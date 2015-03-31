@@ -1,14 +1,14 @@
 version 2
-run General-0-20150129-15:41:49-3564
+run General-0-20150331-17:33:25-26930
 attr configname General
-attr datetime 20150129-15:41:49
+attr datetime 20150331-17:33:25
 attr experiment General
 attr inifile omnetpp.ini
 attr iterationvars ""
 attr iterationvars2 $repetition=0
 attr measurement ""
 attr network mIPv6NetworkExample
-attr processid 3564
+attr processid 26930
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -60,73 +60,64 @@ attr title  "queue length, vector"
 vector 156  mIPv6NetworkExample.NEMO.wlan.mgmt  dataQueueLen:vector  ETV
 attr interpolationmode  sample-hold
 attr title  "data queue length, vector"
-vector 173  mIPv6NetworkExample.NEMO.R.wlan[0].mgmt  dataQueueLen:vector  ETV
+vector 188  mIPv6NetworkExample.NEMO.R.eth[0].queue.pauseQueue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 192  mIPv6NetworkExample.NEMO.R.eth[0].queue.dataQueue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 208  mIPv6NetworkExample.NEMO.R.eth[1].queue.pauseQueue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 212  mIPv6NetworkExample.NEMO.R.eth[1].queue.dataQueue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 235  mIPv6NetworkExample.NEMO.LFN6.eth[0].queue.pauseQueue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 239  mIPv6NetworkExample.NEMO.LFN6.eth[0].queue.dataQueue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 262  mIPv6NetworkExample.CN.eth[0].queue.pauseQueue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 266  mIPv6NetworkExample.CN.eth[0].queue.dataQueue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 267  mIPv6NetworkExample.AP_Home.wlan[0].mgmt  dataQueueLen:vector  ETV
 attr interpolationmode  sample-hold
 attr title  "data queue length, vector"
-vector 198  mIPv6NetworkExample.NEMO.R.eth[0].queue.pauseQueue  queueLength:vector  ETV
+vector 289  mIPv6NetworkExample.AP_Home.eth[0].queue.pauseQueue  queueLength:vector  ETV
 attr interpolationmode  sample-hold
 attr title  "queue length, vector"
-vector 202  mIPv6NetworkExample.NEMO.R.eth[0].queue.dataQueue  queueLength:vector  ETV
+vector 293  mIPv6NetworkExample.AP_Home.eth[0].queue.dataQueue  queueLength:vector  ETV
 attr interpolationmode  sample-hold
 attr title  "queue length, vector"
-vector 218  mIPv6NetworkExample.NEMO.R.eth[1].queue.pauseQueue  queueLength:vector  ETV
-attr interpolationmode  sample-hold
-attr title  "queue length, vector"
-vector 222  mIPv6NetworkExample.NEMO.R.eth[1].queue.dataQueue  queueLength:vector  ETV
-attr interpolationmode  sample-hold
-attr title  "queue length, vector"
-vector 245  mIPv6NetworkExample.NEMO.LFN6.eth[0].queue.pauseQueue  queueLength:vector  ETV
-attr interpolationmode  sample-hold
-attr title  "queue length, vector"
-vector 249  mIPv6NetworkExample.NEMO.LFN6.eth[0].queue.dataQueue  queueLength:vector  ETV
-attr interpolationmode  sample-hold
-attr title  "queue length, vector"
-vector 272  mIPv6NetworkExample.CN.eth[0].queue.pauseQueue  queueLength:vector  ETV
-attr interpolationmode  sample-hold
-attr title  "queue length, vector"
-vector 276  mIPv6NetworkExample.CN.eth[0].queue.dataQueue  queueLength:vector  ETV
-attr interpolationmode  sample-hold
-attr title  "queue length, vector"
-vector 277  mIPv6NetworkExample.AP_Home.wlan[0].mgmt  dataQueueLen:vector  ETV
+vector 294  mIPv6NetworkExample.AP_1.wlan[0].mgmt  dataQueueLen:vector  ETV
 attr interpolationmode  sample-hold
 attr title  "data queue length, vector"
-vector 299  mIPv6NetworkExample.AP_Home.eth[0].queue.pauseQueue  queueLength:vector  ETV
+vector 316  mIPv6NetworkExample.AP_1.eth[0].queue.pauseQueue  queueLength:vector  ETV
 attr interpolationmode  sample-hold
 attr title  "queue length, vector"
-vector 303  mIPv6NetworkExample.AP_Home.eth[0].queue.dataQueue  queueLength:vector  ETV
+vector 320  mIPv6NetworkExample.AP_1.eth[0].queue.dataQueue  queueLength:vector  ETV
 attr interpolationmode  sample-hold
 attr title  "queue length, vector"
-vector 304  mIPv6NetworkExample.AP_1.wlan[0].mgmt  dataQueueLen:vector  ETV
-attr interpolationmode  sample-hold
-attr title  "data queue length, vector"
-vector 326  mIPv6NetworkExample.AP_1.eth[0].queue.pauseQueue  queueLength:vector  ETV
-attr interpolationmode  sample-hold
-attr title  "queue length, vector"
-vector 330  mIPv6NetworkExample.AP_1.eth[0].queue.dataQueue  queueLength:vector  ETV
-attr interpolationmode  sample-hold
-attr title  "queue length, vector"
-vector 332  mIPv6NetworkExample.NEMO.wlan.mac  RadioState  ETV
+vector 322  mIPv6NetworkExample.NEMO.wlan.mac  RadioState  ETV
 attr enum  "IDLE=0, OFF=4, RECV=1, SLEEP=3, TRANSMIT=2"
 attr enumname  RadioState
-vector 331  mIPv6NetworkExample.NEMO.wlan.mac  State  ETV
+vector 321  mIPv6NetworkExample.NEMO.wlan.mac  State  ETV
 attr enum  "BACKOFF=3, DEFER=1, IDLE=0, RECEIVE=8, WAITACK=4, WAITAIFS=2, WAITCTS=6, WAITMULTICAST=5, WAITSIFS=7"
 attr enumname  Ieee80211Mac
-vector 338  mIPv6NetworkExample.NEMO.R.wlan[0].mac  RadioState  ETV
+vector 328  mIPv6NetworkExample.AP_Home.wlan[0].mac  RadioState  ETV
 attr enum  "IDLE=0, OFF=4, RECV=1, SLEEP=3, TRANSMIT=2"
 attr enumname  RadioState
-vector 337  mIPv6NetworkExample.NEMO.R.wlan[0].mac  State  ETV
+vector 327  mIPv6NetworkExample.AP_Home.wlan[0].mac  State  ETV
 attr enum  "BACKOFF=3, DEFER=1, IDLE=0, RECEIVE=8, WAITACK=4, WAITAIFS=2, WAITCTS=6, WAITMULTICAST=5, WAITSIFS=7"
 attr enumname  Ieee80211Mac
-vector 344  mIPv6NetworkExample.AP_Home.wlan[0].mac  RadioState  ETV
+vector 334  mIPv6NetworkExample.AP_1.wlan[0].mac  RadioState  ETV
 attr enum  "IDLE=0, OFF=4, RECV=1, SLEEP=3, TRANSMIT=2"
 attr enumname  RadioState
-vector 343  mIPv6NetworkExample.AP_Home.wlan[0].mac  State  ETV
-attr enum  "BACKOFF=3, DEFER=1, IDLE=0, RECEIVE=8, WAITACK=4, WAITAIFS=2, WAITCTS=6, WAITMULTICAST=5, WAITSIFS=7"
-attr enumname  Ieee80211Mac
-vector 350  mIPv6NetworkExample.AP_1.wlan[0].mac  RadioState  ETV
-attr enum  "IDLE=0, OFF=4, RECV=1, SLEEP=3, TRANSMIT=2"
-attr enumname  RadioState
-vector 349  mIPv6NetworkExample.AP_1.wlan[0].mac  State  ETV
+vector 333  mIPv6NetworkExample.AP_1.wlan[0].mac  State  ETV
 attr enum  "BACKOFF=3, DEFER=1, IDLE=0, RECEIVE=8, WAITACK=4, WAITAIFS=2, WAITCTS=6, WAITMULTICAST=5, WAITSIFS=7"
 attr enumname  Ieee80211Mac
 vector 162  mIPv6NetworkExample.NEMO.wlan.radio  bitrate:vector  ETV
@@ -139,31 +130,73 @@ attr title  "radio state (enum), vector"
 vector 163  mIPv6NetworkExample.NEMO.wlan.radio  channelNo:vector  ETV
 attr interpolationmode  sample-hold
 attr title  "channel no, vector"
-vector 179  mIPv6NetworkExample.NEMO.R.wlan[0].radio  bitrate:vector  ETV
+vector 273  mIPv6NetworkExample.AP_Home.wlan[0].radio  bitrate:vector  ETV
 attr interpolationmode  sample-hold
 attr title  "tx bitrate, vector"
 attr unit  bps
-vector 181  mIPv6NetworkExample.NEMO.R.wlan[0].radio  radioState:vector  ETV
+vector 275  mIPv6NetworkExample.AP_Home.wlan[0].radio  radioState:vector  ETV
 attr interpolationmode  sample-hold
 attr title  "radio state (enum), vector"
-vector 180  mIPv6NetworkExample.NEMO.R.wlan[0].radio  channelNo:vector  ETV
+vector 274  mIPv6NetworkExample.AP_Home.wlan[0].radio  channelNo:vector  ETV
 attr interpolationmode  sample-hold
 attr title  "channel no, vector"
-vector 283  mIPv6NetworkExample.AP_Home.wlan[0].radio  bitrate:vector  ETV
+vector 300  mIPv6NetworkExample.AP_1.wlan[0].radio  bitrate:vector  ETV
 attr interpolationmode  sample-hold
 attr title  "tx bitrate, vector"
 attr unit  bps
-vector 285  mIPv6NetworkExample.AP_Home.wlan[0].radio  radioState:vector  ETV
+vector 302  mIPv6NetworkExample.AP_1.wlan[0].radio  radioState:vector  ETV
 attr interpolationmode  sample-hold
 attr title  "radio state (enum), vector"
-vector 284  mIPv6NetworkExample.AP_Home.wlan[0].radio  channelNo:vector  ETV
+vector 301  mIPv6NetworkExample.AP_1.wlan[0].radio  channelNo:vector  ETV
 attr interpolationmode  sample-hold
 attr title  "channel no, vector"
-vector 310  mIPv6NetworkExample.AP_1.wlan[0].radio  bitrate:vector  ETV
-attr interpolationmode  sample-hold
-attr title  "tx bitrate, vector"
-attr unit  bps
-vector 312  mIPv6NetworkExample.AP_1.wlan[0].radio  radioState:vector  ETV
-attr interpolationmode  sample-hold
-attr title  "radio state (enum), vector"
-vector 311  mIPv6NetworkExample.AP_1.
+20	0	0	0
+24	0	0	0
+40	0	0	0
+44	0	0	0
+64	0	0	0
+68	0	0	0
+84	0	0	0
+88	0	0	0
+108	0	0	0
+112	0	0	0
+128	0	0	0
+132	0	0	0
+148	0	0	0
+152	0	0	0
+156	0	0	0
+162	0	0	2000000
+163	0	0	0
+164	0	0	0
+188	0	0	0
+192	0	0	0
+208	0	0	0
+212	0	0	0
+235	0	0	0
+239	0	0	0
+262	0	0	0
+266	0	0	0
+267	0	0	0
+273	0	0	2000000
+274	0	0	1
+275	0	0	0
+289	0	0	0
+293	0	0	0
+294	0	0	0
+300	0	0	2000000
+301	0	0	2
+302	0	0	0
+316	0	0	0
+320	0	0	0
+321	0	0	0
+321	0	0	0
+322	0	0	0
+322	0	0	0
+327	0	0	0
+327	0	0	0
+328	0	0	0
+328	0	0	0
+333	0	0	0
+333	0	0	0
+334	0	0	0
+334	0	0	0
