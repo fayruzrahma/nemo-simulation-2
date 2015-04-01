@@ -43,10 +43,10 @@ module SimpleNeMO6_end
             @display("p=612,36");
         }
         
-        wlan: <default("Ieee80211Nic")> like IWirelessNic {
-            parameters:
-                @display("p=396,216;q=queue");
-        }
+//        wlan: <default("Ieee80211Nic")> like IWirelessNic {
+//            parameters:
+//                @display("p=396,216;q=queue");
+//        }
         notificationBoard: NotificationBoard {
             parameters:
                 @display("p=497,37");
@@ -55,7 +55,7 @@ module SimpleNeMO6_end
         R: MobileRouter6 {
             parameters:
                 @display("p=196,305");
-//                numRadios = 1;
+                numRadios = 1;
         }
         LFN6: StandardHost6 {
             @display("p=344,305");
@@ -69,9 +69,9 @@ module SimpleNeMO6_end
 //        }
 
     connections allowunconnected:
-//        radioIn --> R.radioIn++;
-        radioIn --> wlan.radioIn;
-        wlan.upperLayerOut --> ethernetline --> R.ethg$i++;
-        wlan.upperLayerIn <-- ethernetline <-- R.ethg$o++;
+        radioIn --> R.radioIn++;
+//        radioIn --> wlan.radioIn;
+//        wlan.upperLayerOut --> ethernetline --> R.ethg$i++;
+//        wlan.upperLayerIn <-- ethernetline <-- R.ethg$o++;
         R.ethg++ <--> ethernetline <--> LFN6.ethg++;
 }

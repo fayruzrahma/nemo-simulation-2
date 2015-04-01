@@ -1,15 +1,15 @@
-file 7844 1427798075                                            
+file 139589 1427861309                                          
 version 2
-run General-0-20150331-17:33:25-26930
+run General-0-20150401-11:07:13-20495
 attr configname General
-attr datetime 20150331-17:33:25
+attr datetime 20150401-11:07:13
 attr experiment General
 attr inifile omnetpp.ini
 attr iterationvars ""
 attr iterationvars2 $repetition=0
 attr measurement ""
 attr network mIPv6NetworkExample
-attr processid 26930
+attr processid 20495
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -58,7 +58,7 @@ attr title  "queue length, vector"
 vector 152  mIPv6NetworkExample.R_2.eth[2].queue.dataQueue  queueLength:vector  ETV
 attr interpolationmode  sample-hold
 attr title  "queue length, vector"
-vector 156  mIPv6NetworkExample.NEMO.wlan.mgmt  dataQueueLen:vector  ETV
+vector 163  mIPv6NetworkExample.NEMO.R.wlan[0].mgmt  dataQueueLen:vector  ETV
 attr interpolationmode  sample-hold
 attr title  "data queue length, vector"
 vector 188  mIPv6NetworkExample.NEMO.R.eth[0].queue.pauseQueue  queueLength:vector  ETV
@@ -67,131 +67,558 @@ attr title  "queue length, vector"
 vector 192  mIPv6NetworkExample.NEMO.R.eth[0].queue.dataQueue  queueLength:vector  ETV
 attr interpolationmode  sample-hold
 attr title  "queue length, vector"
-vector 208  mIPv6NetworkExample.NEMO.R.eth[1].queue.pauseQueue  queueLength:vector  ETV
+vector 215  mIPv6NetworkExample.NEMO.LFN6.eth[0].queue.pauseQueue  queueLength:vector  ETV
 attr interpolationmode  sample-hold
 attr title  "queue length, vector"
-vector 212  mIPv6NetworkExample.NEMO.R.eth[1].queue.dataQueue  queueLength:vector  ETV
+vector 219  mIPv6NetworkExample.NEMO.LFN6.eth[0].queue.dataQueue  queueLength:vector  ETV
 attr interpolationmode  sample-hold
 attr title  "queue length, vector"
-vector 235  mIPv6NetworkExample.NEMO.LFN6.eth[0].queue.pauseQueue  queueLength:vector  ETV
+vector 242  mIPv6NetworkExample.CN.eth[0].queue.pauseQueue  queueLength:vector  ETV
 attr interpolationmode  sample-hold
 attr title  "queue length, vector"
-vector 239  mIPv6NetworkExample.NEMO.LFN6.eth[0].queue.dataQueue  queueLength:vector  ETV
+vector 246  mIPv6NetworkExample.CN.eth[0].queue.dataQueue  queueLength:vector  ETV
 attr interpolationmode  sample-hold
 attr title  "queue length, vector"
-vector 262  mIPv6NetworkExample.CN.eth[0].queue.pauseQueue  queueLength:vector  ETV
-attr interpolationmode  sample-hold
-attr title  "queue length, vector"
-vector 266  mIPv6NetworkExample.CN.eth[0].queue.dataQueue  queueLength:vector  ETV
-attr interpolationmode  sample-hold
-attr title  "queue length, vector"
-vector 267  mIPv6NetworkExample.AP_Home.wlan[0].mgmt  dataQueueLen:vector  ETV
+vector 247  mIPv6NetworkExample.AP_Home.wlan[0].mgmt  dataQueueLen:vector  ETV
 attr interpolationmode  sample-hold
 attr title  "data queue length, vector"
-vector 289  mIPv6NetworkExample.AP_Home.eth[0].queue.pauseQueue  queueLength:vector  ETV
+vector 269  mIPv6NetworkExample.AP_Home.eth[0].queue.pauseQueue  queueLength:vector  ETV
 attr interpolationmode  sample-hold
 attr title  "queue length, vector"
-vector 293  mIPv6NetworkExample.AP_Home.eth[0].queue.dataQueue  queueLength:vector  ETV
+vector 273  mIPv6NetworkExample.AP_Home.eth[0].queue.dataQueue  queueLength:vector  ETV
 attr interpolationmode  sample-hold
 attr title  "queue length, vector"
-vector 294  mIPv6NetworkExample.AP_1.wlan[0].mgmt  dataQueueLen:vector  ETV
+vector 274  mIPv6NetworkExample.AP_1.wlan[0].mgmt  dataQueueLen:vector  ETV
 attr interpolationmode  sample-hold
 attr title  "data queue length, vector"
-vector 316  mIPv6NetworkExample.AP_1.eth[0].queue.pauseQueue  queueLength:vector  ETV
+vector 296  mIPv6NetworkExample.AP_1.eth[0].queue.pauseQueue  queueLength:vector  ETV
 attr interpolationmode  sample-hold
 attr title  "queue length, vector"
-vector 320  mIPv6NetworkExample.AP_1.eth[0].queue.dataQueue  queueLength:vector  ETV
+vector 300  mIPv6NetworkExample.AP_1.eth[0].queue.dataQueue  queueLength:vector  ETV
 attr interpolationmode  sample-hold
 attr title  "queue length, vector"
-vector 322  mIPv6NetworkExample.NEMO.wlan.mac  RadioState  ETV
+vector 302  mIPv6NetworkExample.NEMO.R.wlan[0].mac  RadioState  ETV
 attr enum  "IDLE=0, OFF=4, RECV=1, SLEEP=3, TRANSMIT=2"
 attr enumname  RadioState
-vector 321  mIPv6NetworkExample.NEMO.wlan.mac  State  ETV
+vector 301  mIPv6NetworkExample.NEMO.R.wlan[0].mac  State  ETV
 attr enum  "BACKOFF=3, DEFER=1, IDLE=0, RECEIVE=8, WAITACK=4, WAITAIFS=2, WAITCTS=6, WAITMULTICAST=5, WAITSIFS=7"
 attr enumname  Ieee80211Mac
-vector 328  mIPv6NetworkExample.AP_Home.wlan[0].mac  RadioState  ETV
+vector 308  mIPv6NetworkExample.AP_Home.wlan[0].mac  RadioState  ETV
 attr enum  "IDLE=0, OFF=4, RECV=1, SLEEP=3, TRANSMIT=2"
 attr enumname  RadioState
-vector 327  mIPv6NetworkExample.AP_Home.wlan[0].mac  State  ETV
+vector 307  mIPv6NetworkExample.AP_Home.wlan[0].mac  State  ETV
 attr enum  "BACKOFF=3, DEFER=1, IDLE=0, RECEIVE=8, WAITACK=4, WAITAIFS=2, WAITCTS=6, WAITMULTICAST=5, WAITSIFS=7"
 attr enumname  Ieee80211Mac
-vector 334  mIPv6NetworkExample.AP_1.wlan[0].mac  RadioState  ETV
+vector 314  mIPv6NetworkExample.AP_1.wlan[0].mac  RadioState  ETV
 attr enum  "IDLE=0, OFF=4, RECV=1, SLEEP=3, TRANSMIT=2"
 attr enumname  RadioState
-vector 333  mIPv6NetworkExample.AP_1.wlan[0].mac  State  ETV
+vector 313  mIPv6NetworkExample.AP_1.wlan[0].mac  State  ETV
 attr enum  "BACKOFF=3, DEFER=1, IDLE=0, RECEIVE=8, WAITACK=4, WAITAIFS=2, WAITCTS=6, WAITMULTICAST=5, WAITSIFS=7"
 attr enumname  Ieee80211Mac
-vector 162  mIPv6NetworkExample.NEMO.wlan.radio  bitrate:vector  ETV
+vector 169  mIPv6NetworkExample.NEMO.R.wlan[0].radio  bitrate:vector  ETV
 attr interpolationmode  sample-hold
 attr title  "tx bitrate, vector"
 attr unit  bps
-vector 164  mIPv6NetworkExample.NEMO.wlan.radio  radioState:vector  ETV
+vector 171  mIPv6NetworkExample.NEMO.R.wlan[0].radio  radioState:vector  ETV
 attr interpolationmode  sample-hold
 attr title  "radio state (enum), vector"
-vector 163  mIPv6NetworkExample.NEMO.wlan.radio  channelNo:vector  ETV
+vector 170  mIPv6NetworkExample.NEMO.R.wlan[0].radio  channelNo:vector  ETV
 attr interpolationmode  sample-hold
 attr title  "channel no, vector"
-vector 273  mIPv6NetworkExample.AP_Home.wlan[0].radio  bitrate:vector  ETV
+vector 253  mIPv6NetworkExample.AP_Home.wlan[0].radio  bitrate:vector  ETV
 attr interpolationmode  sample-hold
 attr title  "tx bitrate, vector"
 attr unit  bps
-vector 275  mIPv6NetworkExample.AP_Home.wlan[0].radio  radioState:vector  ETV
+vector 255  mIPv6NetworkExample.AP_Home.wlan[0].radio  radioState:vector  ETV
 attr interpolationmode  sample-hold
 attr title  "radio state (enum), vector"
-vector 274  mIPv6NetworkExample.AP_Home.wlan[0].radio  channelNo:vector  ETV
+vector 254  mIPv6NetworkExample.AP_Home.wlan[0].radio  channelNo:vector  ETV
 attr interpolationmode  sample-hold
 attr title  "channel no, vector"
-vector 300  mIPv6NetworkExample.AP_1.wlan[0].radio  bitrate:vector  ETV
+vector 280  mIPv6NetworkExample.AP_1.wlan[0].radio  bitrate:vector  ETV
 attr interpolationmode  sample-hold
 attr title  "tx bitrate, vector"
 attr unit  bps
-vector 302  mIPv6NetworkExample.AP_1.wlan[0].radio  radioState:vector  ETV
+vector 282  mIPv6NetworkExample.AP_1.wlan[0].radio  radioState:vector  ETV
 attr interpolationmode  sample-hold
 attr title  "radio state (enum), vector"
-vector 301  mIPv6NetworkExample.AP_1.wlan[0].radio  channelNo:vector  ETV
+vector 281  mIPv6NetworkExample.AP_1.wlan[0].radio  channelNo:vector  ETV
 attr interpolationmode  sample-hold
 attr title  "channel no, vector"
-20	7334 9 0 0 0 0 1 0 0 0 0
-24	7343 9 0 0 0 0 1 0 0 0 0
-40	7352 9 0 0 0 0 1 0 0 0 0
-44	7361 9 0 0 0 0 1 0 0 0 0
-64	7370 9 0 0 0 0 1 0 0 0 0
-68	7379 9 0 0 0 0 1 0 0 0 0
-84	7388 9 0 0 0 0 1 0 0 0 0
-88	7397 9 0 0 0 0 1 0 0 0 0
-108	7406 10 0 0 0 0 1 0 0 0 0
-112	7416 10 0 0 0 0 1 0 0 0 0
-128	7426 10 0 0 0 0 1 0 0 0 0
-132	7436 10 0 0 0 0 1 0 0 0 0
-148	7446 10 0 0 0 0 1 0 0 0 0
-152	7456 10 0 0 0 0 1 0 0 0 0
-156	7466 10 0 0 0 0 1 0 0 0 0
-162	7476 16 0 0 0 0 1 2000000 2000000 2000000 4000000000000
-163	7492 10 0 0 0 0 1 0 0 0 0
-164	7502 10 0 0 0 0 1 0 0 0 0
-188	7512 10 0 0 0 0 1 0 0 0 0
-192	7522 10 0 0 0 0 1 0 0 0 0
-208	7532 10 0 0 0 0 1 0 0 0 0
-212	7542 10 0 0 0 0 1 0 0 0 0
-235	7552 10 0 0 0 0 1 0 0 0 0
-239	7562 10 0 0 0 0 1 0 0 0 0
-262	7572 10 0 0 0 0 1 0 0 0 0
-266	7582 10 0 0 0 0 1 0 0 0 0
-267	7592 10 0 0 0 0 1 0 0 0 0
-273	7602 16 0 0 0 0 1 2000000 2000000 2000000 4000000000000
-274	7618 10 0 0 0 0 1 1 1 1 1
-275	7628 10 0 0 0 0 1 0 0 0 0
-289	7638 10 0 0 0 0 1 0 0 0 0
-293	7648 10 0 0 0 0 1 0 0 0 0
-294	7658 10 0 0 0 0 1 0 0 0 0
-300	7668 16 0 0 0 0 1 2000000 2000000 2000000 4000000000000
-301	7684 10 0 0 0 0 1 2 2 2 4
-302	7694 10 0 0 0 0 1 0 0 0 0
-316	7704 10 0 0 0 0 1 0 0 0 0
-320	7714 10 0 0 0 0 1 0 0 0 0
-321	7724 20 0 0 0 0 2 0 0 0 0
-322	7744 20 0 0 0 0 2 0 0 0 0
-327	7764 20 0 0 0 0 2 0 0 0 0
-328	7784 20 0 0 0 0 2 0 0 0 0
-333	7804 20 0 0 0 0 2 0 0 0 0
-334	7824 20 0 0 0 0 2 0 0 0 0
+vector 156  mIPv6NetworkExample.NEMO.R.networkLayer.neighbourDiscovery  startDAD:vector  ETV
+attr title  "DAD started, vector"
+vector 182  mIPv6NetworkExample.NEMO.R.eth[0].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 189  mIPv6NetworkExample.NEMO.R.eth[0].queue.dataQueue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 191  mIPv6NetworkExample.NEMO.R.eth[0].queue.dataQueue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 178  mIPv6NetworkExample.NEMO.R.eth[0].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 173  mIPv6NetworkExample.NEMO.R.eth[0].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 201  mIPv6NetworkExample.NEMO.LFN6.eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 202  mIPv6NetworkExample.NEMO.LFN6.eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 210  mIPv6NetworkExample.NEMO.LFN6.eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 34  mIPv6NetworkExample.Home_Agent.eth[1].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 41  mIPv6NetworkExample.Home_Agent.eth[1].queue.dataQueue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 43  mIPv6NetworkExample.Home_Agent.eth[1].queue.dataQueue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 30  mIPv6NetworkExample.Home_Agent.eth[1].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 25  mIPv6NetworkExample.Home_Agent.eth[1].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 258  mIPv6NetworkExample.AP_Home.eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 259  mIPv6NetworkExample.AP_Home.eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 251  mIPv6NetworkExample.AP_Home.wlan[0].mac  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 250  mIPv6NetworkExample.AP_Home.wlan[0].mac  sentDownPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, vector(packetBytes)"
+vector 78  mIPv6NetworkExample.R_1.eth[1].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 85  mIPv6NetworkExample.R_1.eth[1].queue.dataQueue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 87  mIPv6NetworkExample.R_1.eth[1].queue.dataQueue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 74  mIPv6NetworkExample.R_1.eth[1].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 69  mIPv6NetworkExample.R_1.eth[1].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 285  mIPv6NetworkExample.AP_1.eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 286  mIPv6NetworkExample.AP_1.eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 278  mIPv6NetworkExample.AP_1.wlan[0].mac  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 277  mIPv6NetworkExample.AP_1.wlan[0].mac  sentDownPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, vector(packetBytes)"
+vector 45  mIPv6NetworkExample.R_1.networkLayer.neighbourDiscovery  startDAD:vector  ETV
+attr title  "DAD started, vector"
+vector 58  mIPv6NetworkExample.R_1.eth[0].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 65  mIPv6NetworkExample.R_1.eth[0].queue.dataQueue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 67  mIPv6NetworkExample.R_1.eth[0].queue.dataQueue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 54  mIPv6NetworkExample.R_1.eth[0].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 49  mIPv6NetworkExample.R_1.eth[0].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 94  mIPv6NetworkExample.R_2.eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 95  mIPv6NetworkExample.R_2.eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 103  mIPv6NetworkExample.R_2.eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 310  mIPv6NetworkExample.AP_Home.wlan[0].mac  "throughput AC0"  ETV
+vector 1  mIPv6NetworkExample.Home_Agent.networkLayer.neighbourDiscovery  startDAD:vector  ETV
+attr title  "DAD started, vector"
+vector 14  mIPv6NetworkExample.Home_Agent.eth[0].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 21  mIPv6NetworkExample.Home_Agent.eth[0].queue.dataQueue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 23  mIPv6NetworkExample.Home_Agent.eth[0].queue.dataQueue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 10  mIPv6NetworkExample.Home_Agent.eth[0].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 5  mIPv6NetworkExample.Home_Agent.eth[0].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 114  mIPv6NetworkExample.R_2.eth[1].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 115  mIPv6NetworkExample.R_2.eth[1].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 123  mIPv6NetworkExample.R_2.eth[1].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 89  mIPv6NetworkExample.R_2.networkLayer.neighbourDiscovery  startDAD:vector  ETV
+attr title  "DAD started, vector"
+vector 102  mIPv6NetworkExample.R_2.eth[0].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 109  mIPv6NetworkExample.R_2.eth[0].queue.dataQueue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 111  mIPv6NetworkExample.R_2.eth[0].queue.dataQueue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 98  mIPv6NetworkExample.R_2.eth[0].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 93  mIPv6NetworkExample.R_2.eth[0].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 50  mIPv6NetworkExample.R_1.eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 51  mIPv6NetworkExample.R_1.eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 59  mIPv6NetworkExample.R_1.eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 122  mIPv6NetworkExample.R_2.eth[1].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 129  mIPv6NetworkExample.R_2.eth[1].queue.dataQueue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 131  mIPv6NetworkExample.R_2.eth[1].queue.dataQueue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 118  mIPv6NetworkExample.R_2.eth[1].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 113  mIPv6NetworkExample.R_2.eth[1].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 6  mIPv6NetworkExample.Home_Agent.eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 7  mIPv6NetworkExample.Home_Agent.eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 15  mIPv6NetworkExample.Home_Agent.eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 142  mIPv6NetworkExample.R_2.eth[2].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 149  mIPv6NetworkExample.R_2.eth[2].queue.dataQueue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 151  mIPv6NetworkExample.R_2.eth[2].queue.dataQueue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 138  mIPv6NetworkExample.R_2.eth[2].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 0  mIPv6NetworkExample.hub  pk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  pk
+attr title  "packets, vector(packetBytes)"
+vector 133  mIPv6NetworkExample.R_2.eth[2].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 228  mIPv6NetworkExample.CN.eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 229  mIPv6NetworkExample.CN.eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 237  mIPv6NetworkExample.CN.eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 316  mIPv6NetworkExample.AP_1.wlan[0].mac  "throughput AC0"  ETV
+vector 160  mIPv6NetworkExample.NEMO.R.wlan[0].agent  sentRequest:vector  ETV
+attr title  "sent requests, vector"
+vector 304  mIPv6NetworkExample.NEMO.R.wlan[0].mac  "throughput AC0"  ETV
+vector 167  mIPv6NetworkExample.NEMO.R.wlan[0].mac  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 166  mIPv6NetworkExample.NEMO.R.wlan[0].mac  sentDownPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, vector(packetBytes)"
+vector 223  mIPv6NetworkExample.CN.networkLayer.neighbourDiscovery  startDAD:vector  ETV
+attr title  "DAD started, vector"
+vector 236  mIPv6NetworkExample.CN.eth[0].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 243  mIPv6NetworkExample.CN.eth[0].queue.dataQueue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 245  mIPv6NetworkExample.CN.eth[0].queue.dataQueue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 232  mIPv6NetworkExample.CN.eth[0].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 227  mIPv6NetworkExample.CN.eth[0].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 134  mIPv6NetworkExample.R_2.eth[2].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 135  mIPv6NetworkExample.R_2.eth[2].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 143  mIPv6NetworkExample.R_2.eth[2].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 196  mIPv6NetworkExample.NEMO.LFN6.networkLayer.neighbourDiscovery  startDAD:vector  ETV
+attr title  "DAD started, vector"
+vector 209  mIPv6NetworkExample.NEMO.LFN6.eth[0].encap  encapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, vector(packetBytes)"
+vector 216  mIPv6NetworkExample.NEMO.LFN6.eth[0].queue.dataQueue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 218  mIPv6NetworkExample.NEMO.LFN6.eth[0].queue.dataQueue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 205  mIPv6NetworkExample.NEMO.LFN6.eth[0].mac  rxPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, vector(packetBytes)"
+vector 200  mIPv6NetworkExample.NEMO.LFN6.eth[0].mac  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, vector(packetBytes)"
+vector 174  mIPv6NetworkExample.NEMO.R.eth[0].mac  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 175  mIPv6NetworkExample.NEMO.R.eth[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 183  mIPv6NetworkExample.NEMO.R.eth[0].encap  decapPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, vector(packetBytes)"
+vector 162  mIPv6NetworkExample.NEMO.R.wlan[0].agent  dropConfirm:vector  ETV
+attr title  "dropped confirms, vector"
+0	24248 73 254 2742 0.147820876332 2.443485148708 3 72 72 216 15552
+1	24321 46 179 179 0.137049966794 0.137049966794 2 1 1 2 2
+5	24367 24 188 188 0.137065726794 0.137065726794 1 64 64 64 4096
+6	24391 24 244 244 0.147816636332 0.147816636332 1 64 64 64 4096
+7	24415 24 244 244 0.147816636332 0.147816636332 1 64 64 64 4096
+10	24439 25 187 187 0.137059966794 0.137059966794 1 64 64 64 4096
+14	24464 25 183 183 0.137059966794 0.137059966794 1 40 40 40 1600
+15	24489 25 245 245 0.147816636332 0.147816636332 1 40 40 40 1600
+20	24514 9 0 0 0 0 1 0 0 0 0
+21	24523 25 185 185 0.137059966794 0.137059966794 1 64 64 64 4096
+23	24548 24 185 185 0.137059966794 0.137059966794 1 0 0 0 0
+24	24572 57 0 185 0 0.137059966794 3 0 1 1 1
+25	24629 1250 30 2715 0.035830565896 2.404118714897 49 64 64 3136 200704
+30	25879 1250 29 2714 0.035824805896 2.404112954897 49 64 64 3136 200704
+34	27129 1250 25 2710 0.035824805896 2.404112954897 49 40 40 1960 78400
+40	28379 9 0 0 0 0 1 0 0 0 0
+41	28388 1250 27 2712 0.035824805896 2.404112954897 49 64 64 3136 200704
+43	29638 1201 27 2712 0.035824805896 2.404112954897 49 0 0 0 0
+44	30839 2411 0 2712 0 2.404112954897 99 0 1 49 49
+45	33250 46 74 74 0.064673103718 0.064673103718 2 1 1 2 2
+49	33296 24 83 83 0.064688863718 0.064688863718 1 64 64 64 4096
+50	33320 25 232 232 0.147806636332 0.147806636332 1 64 64 64 4096
+51	33345 25 232 232 0.147806636332 0.147806636332 1 64 64 64 4096
+54	33370 24 82 82 0.064683103718 0.064683103718 1 64 64 64 4096
+58	33394 24 78 78 0.064683103718 0.064683103718 1 40 40 40 1600
+59	33418 25 233 233 0.147806636332 0.147806636332 1 40 40 40 1600
+64	33443 9 0 0 0 0 1 0 0 0 0
+65	33452 24 80 80 0.064683103718 0.064683103718 1 64 64 64 4096
+67	33476 23 80 80 0.064683103718 0.064683103718 1 0 0 0 0
+68	33499 55 0 80 0 0.064683103718 3 0 1 1 1
+69	33554 1199 62 2695 0.055981522063 2.388966710554 47 64 64 3008 192512
+74	34753 1225 61 2765 0.055975762063 2.450963243639 48 64 64 3072 196608
+78	35978 1225 57 2761 0.055975762063 2.450963243639 48 40 40 1920 76800
+84	37203 9 0 0 0 0 1 0 0 0 0
+85	37212 1225 59 2763 0.055975762063 2.450963243639 48 64 64 3072 196608
+87	38437 1177 59 2763 0.055975762063 2.450963243639 48 0 0 0 0
+88	39614 2363 0 2763 0 2.450963243639 97 0 1 48 48
+89	41977 72 221 221 0.147790776332 0.147790776332 3 1 1 3 3
+93	42049 25 231 231 0.147806536332 0.147806536332 1 64 64 64 4096
+94	42074 24 84 84 0.064688963718 0.064688963718 1 64 64 64 4096
+95	42098 24 84 84 0.064688963718 0.064688963718 1 64 64 64 4096
+98	42122 25 230 230 0.147800776332 0.147800776332 1 64 64 64 4096
+102	42147 26 226 226 0.147800776332 0.147800776332 1 40 40 40 1600
+103	42173 25 85 85 0.064688963718 0.064688963718 1 40 40 40 1600
+108	42198 10 0 0 0 0 1 0 0 0 0
+109	42208 26 228 228 0.147800776332 0.147800776332 1 64 64 64 4096
+111	42234 25 228 228 0.147800776332 0.147800776332 1 0 0 0 0
+112	42259 60 0 228 0 0.147800776332 3 0 1 1 1
+113	42319 26 242 242 0.147816536332 0.147816536332 1 64 64 64 4096
+114	42345 26 189 189 0.137065826794 0.137065826794 1 64 64 64 4096
+115	42371 26 189 189 0.137065826794 0.137065826794 1 64 64 64 4096
+118	42397 26 241 241 0.147810776332 0.147810776332 1 64 64 64 4096
+122	42423 26 237 237 0.147810776332 0.147810776332 1 40 40 40 1600
+123	42449 26 190 190 0.137065826794 0.137065826794 1 40 40 40 1600
+128	42475 10 0 0 0 0 1 0 0 0 0
+129	42485 26 239 239 0.147810776332 0.147810776332 1 64 64 64 4096
+131	42511 25 239 239 0.147810776332 0.147810776332 1 0 0 0 0
+132	42536 60 0 239 0 0.147810776332 3 0 1 1 1
+133	42596 26 255 255 0.147826536332 0.147826536332 1 64 64 64 4096
+134	42622 53 909 2744 0.735328411096 2.443491008708 2 64 64 128 8192
+135	42675 53 909 2744 0.735328411096 2.443491008708 2 64 64 128 8192
+138	42728 26 253 253 0.147820776332 0.147820776332 1 64 64 64 4096
+142	42754 26 249 249 0.147820776332 0.147820776332 1 40 40 40 1600
+143	42780 53 910 2745 0.735328411096 2.443491008708 2 40 40 80 3200
+148	42833 10 0 0 0 0 1 0 0 0 0
+149	42843 26 251 251 0.147820776332 0.147820776332 1 64 64 64 4096
+151	42869 25 251 251 0.147820776332 0.147820776332 1 0 0 0 0
+152	42894 60 0 251 0 0.147820776332 3 0 1 1 1
+156	42954 46 5 5 0.007194564957 0.007194564957 2 1 1 2 2
+160	43000 51 286 1629 0.165239371312 1.415239371312 2 1 1 2 2
+162	43051 26 1629 1629 1.415239371312 1.415239371312 1 1 1 1 1
+163	43077 10 0 0 0 0 1 0 0 0 0
+166	43087 240 396 2565 0.265267371312 2.265267371312 9 40 40 360 14400
+167	43327 240 395 2564 0.265239371312 2.265239371312 9 40 40 360 14400
+169	43567 16 0 0 0 0 1 2000000 2000000 2000000 4000000000000
+170	43583 267 0 2729 0 2.415239371312 11 0 4 23 69
+171	43850 472 0 2568 0 2.265779371312 19 0 2 18 36
+173	44322 25 16 16 0.007220324957 0.007220324957 1 64 64 64 4096
+174	44347 27 1050 1050 0.859511684715 0.859511684715 1 64 64 64 4096
+175	44374 27 1050 1050 0.859511684715 0.859511684715 1 64 64 64 4096
+178	44401 25 15 15 0.007214564957 0.007214564957 1 64 64 64 4096
+182	44426 25 11 11 0.007214564957 0.007214564957 1 40 40 40 1600
+183	44451 27 1051 1051 0.859511684715 0.859511684715 1 40 40 40 1600
+188	44478 10 0 0 0 0 1 0 0 0 0
+189	44488 25 13 13 0.007214564957 0.007214564957 1 64 64 64 4096
+191	44513 24 13 13 0.007214564957 0.007214564957 1 0 0 0 0
+192	44537 58 0 13 0 0.007214564957 3 0 1 1 1
+196	44595 26 1041 1041 0.859495824715 0.859495824715 1 1 1 1 1
+200	44621 27 1049 1049 0.859511584715 0.859511584715 1 64 64 64 4096
+201	44648 25 17 17 0.007220424957 0.007220424957 1 64 64 64 4096
+202	44673 25 17 17 0.007220424957 0.007220424957 1 64 64 64 4096
+205	44698 27 1048 1048 0.859505824715 0.859505824715 1 64 64 64 4096
+209	44725 27 1044 1044 0.859505824715 0.859505824715 1 40 40 40 1600
+210	44752 25 18 18 0.007220424957 0.007220424957 1 40 40 40 1600
+215	44777 10 0 0 0 0 1 0 0 0 0
+216	44787 27 1046 1046 0.859505824715 0.859505824715 1 64 64 64 4096
+218	44814 26 1046 1046 0.859505824715 0.859505824715 1 0 0 0 0
+219	44840 62 0 1046 0 0.859505824715 3 0 1 1 1
+223	44902 25 899 899 0.735312451096 0.735312451096 1 1 1 1 1
+227	44927 53 908 2743 0.735328211096 2.443490808708 2 64 64 128 8192
+228	44980 26 257 257 0.147826736332 0.147826736332 1 64 64 64 4096
+229	45006 26 257 257 0.147826736332 0.147826736332 1 64 64 64 4096
+232	45032 53 906 2741 0.735322451096 2.443485048708 2 64 64 128 8192
+236	45085 53 902 2737 0.735322451096 2.443485048708 2 40 40 80 3200
+237	45138 26 258 258 0.147826736332 0.147826736332 1 40 40 40 1600
+242	45164 10 0 0 0 0 1 0 0 0 0
+243	45174 53 904 2739 0.735322451096 2.443485048708 2 64 64 128 8192
+245	45227 51 904 2739 0.735322451096 2.443485048708 2 0 0 0 0
+246	45278 112 0 2739 0 2.443485048708 5 0 1 2 2
+247	45390 10 0 0 0 0 1 0 0 0 0
+250	45400 1966 36 2752 0.035858665896 2.444108983847 74 78 82 5968 481576
+251	47366 1966 34 2751 0.035830665896 2.444080983847 74 78 82 5968 481576
+253	49332 16 0 0 0 0 1 2000000 2000000 2000000 4000000000000
+254	49348 10 0 0 0 0 1 1 1 1 1
+255	49358 3794 0 2755 0 2.444924983847 149 0 2 148 296
+258	53152 1299 31 2716 0.035830665896 2.404118814897 49 64 64 3136 200704
+259	54451 1299 31 2716 0.035830665896 2.404118814897 49 64 64 3136 200704
+269	55750 10 0 0 0 0 1 0 0 0 0
+273	55760 10 0 0 0 0 1 0 0 0 0
+274	55770 10 0 0 0 0 1 0 0 0 0
+277	55780 1887 68 2701 0.056009622063 2.388994810554 71 78 82 5726 462044
+278	57667 1886 66 2699 0.055981622063 2.388966810554 71 78 82 5726 462044
+280	59553 16 0 0 0 0 1 2000000 2000000 2000000 4000000000000
+281	59569 10 0 0 0 0 1 2 2 2 4
+282	59579 3642 0 2704 0 2.389842810554 143 0 2 142 284
+285	63221 1246 63 2696 0.055981622063 2.388966810554 47 64 64 3008 192512
+286	64467 1246 63 2696 0.055981622063 2.388966810554 47 64 64 3008 192512
+296	65713 10 0 0 0 0 1 0 0 0 0
+300	65723 10 0 0 0 0 1 0 0 0 0
+301	65733 3768 0 2729 0 2.415239371312 148 0 5 324 1224
+302	69501 1458 0 2729 0 2.415239371312 58 0 2 36 72
+304	70959 614 289 2729 0.165239371312 2.415239371312 19 0 2133.7316299042 19203.584669138 40975296.016085
+307	71573 26104 0 2757 0 2.444997983847 1022 0 5 2648 10032
+308	97677 7588 0 2755 0 2.444924983847 298 0 2 296 592
+310	105265 869 171 2756 0.130109402187 2.444952983847 22 11621.594337531 25861.911080233 434747.6036813 8967485771.2775
+313	106134 25338 0 2706 0 2.389888810554 992 0 5 2552 9648
+314	131472 7284 0 2704 0 2.389842810554 286 0 2 284 568
+316	138756 833 278 2686 0.159448637621 2.370417365716 21 12791.941077121 31899.698460562 403349.99433075 8259125072.0216
