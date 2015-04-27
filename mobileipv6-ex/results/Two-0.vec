@@ -1,0 +1,194 @@
+version 2
+run Two-0-20150427-16:04:40-18675
+attr configname Two
+attr datetime 20150427-16:04:40
+attr experiment Two
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network mIPv6Network
+attr processid 18675
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 1
+
+vector 20  mIPv6Network.Home_Agent.eth[0].queue.pauseQueue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 24  mIPv6Network.Home_Agent.eth[0].queue.dataQueue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 40  mIPv6Network.Home_Agent.eth[1].queue.pauseQueue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 44  mIPv6Network.Home_Agent.eth[1].queue.dataQueue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 64  mIPv6Network.R_1.eth[0].queue.pauseQueue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 68  mIPv6Network.R_1.eth[0].queue.dataQueue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 84  mIPv6Network.R_1.eth[1].queue.pauseQueue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 88  mIPv6Network.R_1.eth[1].queue.dataQueue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 108  mIPv6Network.R_2.eth[0].queue.pauseQueue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 112  mIPv6Network.R_2.eth[0].queue.dataQueue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 128  mIPv6Network.R_2.eth[1].queue.pauseQueue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 132  mIPv6Network.R_2.eth[1].queue.dataQueue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 148  mIPv6Network.R_2.eth[2].queue.pauseQueue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 152  mIPv6Network.R_2.eth[2].queue.dataQueue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 172  mIPv6Network.CN.eth[0].queue.pauseQueue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 176  mIPv6Network.CN.eth[0].queue.dataQueue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 177  mIPv6Network.AP_Home.wlan[0].mgmt  dataQueueLen:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "data queue length, vector"
+vector 199  mIPv6Network.AP_Home.eth[0].queue.pauseQueue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 203  mIPv6Network.AP_Home.eth[0].queue.dataQueue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 204  mIPv6Network.AP_1.wlan[0].mgmt  dataQueueLen:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "data queue length, vector"
+vector 226  mIPv6Network.AP_1.eth[0].queue.pauseQueue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 230  mIPv6Network.AP_1.eth[0].queue.dataQueue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 238  mIPv6Network.MR.wlan[0].mgmt  dataQueueLen:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "data queue length, vector"
+vector 263  mIPv6Network.MR.eth[0].queue.pauseQueue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 267  mIPv6Network.MR.eth[0].queue.dataQueue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 287  mIPv6Network.LFN.eth[0].queue.pauseQueue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 291  mIPv6Network.LFN.eth[0].queue.dataQueue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 293  mIPv6Network.AP_Home.wlan[0].mac  RadioState  ETV
+attr enum  "IDLE=0, OFF=4, RECV=1, SLEEP=3, TRANSMIT=2"
+attr enumname  RadioState
+vector 292  mIPv6Network.AP_Home.wlan[0].mac  State  ETV
+attr enum  "BACKOFF=3, DEFER=1, IDLE=0, RECEIVE=8, WAITACK=4, WAITAIFS=2, WAITCTS=6, WAITMULTICAST=5, WAITSIFS=7"
+attr enumname  Ieee80211Mac
+vector 299  mIPv6Network.AP_1.wlan[0].mac  RadioState  ETV
+attr enum  "IDLE=0, OFF=4, RECV=1, SLEEP=3, TRANSMIT=2"
+attr enumname  RadioState
+vector 298  mIPv6Network.AP_1.wlan[0].mac  State  ETV
+attr enum  "BACKOFF=3, DEFER=1, IDLE=0, RECEIVE=8, WAITACK=4, WAITAIFS=2, WAITCTS=6, WAITMULTICAST=5, WAITSIFS=7"
+attr enumname  Ieee80211Mac
+vector 305  mIPv6Network.MR.wlan[0].mac  RadioState  ETV
+attr enum  "IDLE=0, OFF=4, RECV=1, SLEEP=3, TRANSMIT=2"
+attr enumname  RadioState
+vector 304  mIPv6Network.MR.wlan[0].mac  State  ETV
+attr enum  "BACKOFF=3, DEFER=1, IDLE=0, RECEIVE=8, WAITACK=4, WAITAIFS=2, WAITCTS=6, WAITMULTICAST=5, WAITSIFS=7"
+attr enumname  Ieee80211Mac
+vector 183  mIPv6Network.AP_Home.wlan[0].radio  bitrate:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx bitrate, vector"
+attr unit  bps
+vector 185  mIPv6Network.AP_Home.wlan[0].radio  radioState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "radio state (enum), vector"
+vector 184  mIPv6Network.AP_Home.wlan[0].radio  channelNo:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "channel no, vector"
+vector 210  mIPv6Network.AP_1.wlan[0].radio  bitrate:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx bitrate, vector"
+attr unit  bps
+vector 212  mIPv6Network.AP_1.wlan[0].radio  radioState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "radio state (enum), vector"
+vector 211  mIPv6Network.AP_1.wlan[0].radio  channelNo:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "channel no, vector"
+vector 244  mIPv6Network.MR.wlan[0].radio  bitrate:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx bitrate, vector"
+attr unit  bps
+vector 246  mIPv6Network.MR.wlan[0].radio  radioState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "radio state (enum), vector"
+vector 245  mIPv6Network.MR.wlan[0].radio  channelNo:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "channel no, vector"
+20	0	0	0
+24	0	0	0
+40	0	0	0
+44	0	0	0
+64	0	0	0
+68	0	0	0
+84	0	0	0
+88	0	0	0
+108	0	0	0
+112	0	0	0
+128	0	0	0
+132	0	0	0
+148	0	0	0
+152	0	0	0
+172	0	0	0
+176	0	0	0
+177	0	0	0
+183	0	0	2000000
+184	0	0	1
+185	0	0	0
+199	0	0	0
+203	0	0	0
+204	0	0	0
+210	0	0	2000000
+211	0	0	2
+212	0	0	0
+226	0	0	0
+230	0	0	0
+238	0	0	0
+244	0	0	2000000
+245	0	0	0
+246	0	0	0
+263	0	0	0
+267	0	0	0
+287	0	0	0
+291	0	0	0
+292	0	0	0
+292	0	0	0
+293	0	0	0
+293	0	0	0
+298	0	0	0
+298	0	0	0
+299	0	0	0
+299	0	0	0
+304	0	0	0
+304	0	0	0
+305	0	0	0
+305	0	0	0
