@@ -16,8 +16,12 @@
 package mobileipv6_ex;
 
 import inet.base.NotificationBoard;
+import inet.linklayer.IMACAddressTable;
+import inet.linklayer.IMACRelayUnit;
 import inet.linklayer.ethernet.EtherHub;
 import inet.linklayer.IWirelessNic;
+import inet.linklayer.ieee80211.radio.Ieee80211Radio;
+import inet.linklayer.radio.IRadio;
 import inet.mobility.contract.IMobility;
 import inet.networklayer.autorouting.ipv6.FlatNetworkConfigurator6;
 import inet.networklayer.common.InterfaceTable;
@@ -33,29 +37,17 @@ module SimpleNeMO6_end
         @node;
         @labels(node,ethernet-node,wireless-node);
         string mobilityType = default("StationaryMobility");
+        string opMode @enum("b","g","a","p") = default("g");
+        double bitrate @unit("bps") = default(opMode == "b" ? 11Mbps : opMode == "p" ? 27Mbps : 54Mbps);
 
     gates:
         inout ethg[];
         input radioIn @directIn;
     submodules:
-        // if interface is used (ex: wlan card, interface table should be added
-        interfaceTable: InterfaceTable {
-            @display("p=612,36");
-        }
-        
-//        wlan: <default("Ieee80211Nic")> like IWirelessNic {
-//            parameters:
-//                @display("p=396,216;q=queue");
-//        }
-        notificationBoard: NotificationBoard {
-            parameters:
-                @display("p=497,37");
-        }
-
-        R: MobileRouter6 {
+       R: MobileRouter6 {
             parameters:
                 @display("p=196,305");
-                numRadios = 1;
+//                numRadios = 1;
         }
         LFN6: StandardHost6 {
             @display("p=344,305");
@@ -64,14 +56,19 @@ module SimpleNeMO6_end
         mobility: <mobilityType> like IMobility {
             @display("p=336,45");
         }
-//        channelControl: ChannelControl {
-//            @display("p=249,36");
-//        }
+
+        radio: Ieee80211Radio {
+            parameters:
+                phyOpMode = opMode;
+                bitrate = bitrate;
+                @display("p=103,305");
+        }
 
     connections allowunconnected:
-        radioIn --> R.radioIn++;
-//        radioIn --> wlan.radioIn;
-//        wlan.upperLayerOut --> ethernetline --> R.ethg$i++;
-//        wlan.upperLayerIn <-- ethernetline <-- R.ethg$o++;
+        //        radioIn --> R.radioIn++;
+        //        radioIn --> wlan.radioIn;
+        radioIn --> radio.radioIn;
+        radio.upperLayerIn <-- ethernetline <-- R.ethg$o++;
+        radio.upperLayerOut --> ethernetline --> R.ethg$i++;
         R.ethg++ <--> ethernetline <--> LFN6.ethg++;
 }
