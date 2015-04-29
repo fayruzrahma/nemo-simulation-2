@@ -1,4 +1,5 @@
 # Partial OMNeT++/Tkenv config file -- see $HOME/.tkenvrc as well
 config default-configname	{One}
 config default-runnumber	{0}
+inspector simulation.scheduled-events.RApacket IPv6Datagram 2192 1 464x412+522+162:normal
 

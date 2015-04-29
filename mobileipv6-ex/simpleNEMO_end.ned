@@ -20,6 +20,7 @@ import inet.linklayer.IMACAddressTable;
 import inet.linklayer.IMACRelayUnit;
 import inet.linklayer.ethernet.EtherHub;
 import inet.linklayer.IWirelessNic;
+import inet.linklayer.ethernet.EthernetInterface;
 import inet.linklayer.ieee80211.radio.Ieee80211Radio;
 import inet.linklayer.radio.IRadio;
 import inet.mobility.contract.IMobility;
@@ -27,6 +28,7 @@ import inet.networklayer.autorouting.ipv6.FlatNetworkConfigurator6;
 import inet.networklayer.common.InterfaceTable;
 import inet.nodes.ipv6.StandardHost6;
 import inet.nodes.wireless.AccessPoint;
+import inet.nodes.wireless.RelayNemo;
 import inet.nodes.xmipv6.MobileRouter6;
 import inet.world.radio.ChannelControl;
 
@@ -37,17 +39,22 @@ module SimpleNeMO6_end
         @node;
         @labels(node,ethernet-node,wireless-node);
         string mobilityType = default("StationaryMobility");
-        string opMode @enum("b","g","a","p") = default("g");
-        double bitrate @unit("bps") = default(opMode == "b" ? 11Mbps : opMode == "p" ? 27Mbps : 54Mbps);
+        //wlanSta.mgmtType = "Ieee80211MgmtSTA";
+        //"Ieee80211MgmtAP"
 
     gates:
         inout ethg[];
         input radioIn @directIn;
     submodules:
-       R: MobileRouter6 {
+        interfaceTable: InterfaceTable {
+            @display("p=266,167");
+        }
+        notificationBoard: NotificationBoard {
+            @display("p=235,45");
+        }
+        R: MobileRouter6 {
             parameters:
                 @display("p=196,305");
-//                numRadios = 1;
         }
         LFN6: StandardHost6 {
             @display("p=344,305");
@@ -57,18 +64,23 @@ module SimpleNeMO6_end
             @display("p=336,45");
         }
 
-        radio: Ieee80211Radio {
-            parameters:
-                phyOpMode = opMode;
-                bitrate = bitrate;
-                @display("p=103,305");
+        wlanSta: <"Ieee80211Nic"> like IWirelessNic {
+            @display("p=95,305");
         }
 
+//        relayNemo: RelayNemo {
+//            @display("p=157,224");
+//        }
+
+        ethernetInterface: EthernetInterface {
+            @display("p=156,235");
+        }
     connections allowunconnected:
-        //        radioIn --> R.radioIn++;
-        //        radioIn --> wlan.radioIn;
-        radioIn --> radio.radioIn;
-        radio.upperLayerIn <-- ethernetline <-- R.ethg$o++;
-        radio.upperLayerOut --> ethernetline --> R.ethg$i++;
+        radioIn --> wlanSta.radioIn;
+        //        wlanSta.upperLayerOut --> ethernetline --> R.pintu$i;
+        //        wlanSta.upperLayerIn <-- ethernetline <-- R.pintu$o;
         R.ethg++ <--> ethernetline <--> LFN6.ethg++;
+        wlanSta.upperLayerOut --> ethernetInterface.upperLayerIn;
+        ethernetInterface.upperLayerOut --> wlanSta.upperLayerIn;
+        ethernetInterface.phys <--> ethernetline <--> R.ethg++;
 }
